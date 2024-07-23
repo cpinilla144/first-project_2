@@ -15,9 +15,6 @@ h2 {
   line-height: 1.5;
 }
 
-
-
-
 .row__nav {
   width: 100%;
   max-width: 1250px;
@@ -72,7 +69,10 @@ nav {
   color: #242424;
 }
 
-nav, ul, li, a {
+nav,
+ul,
+li,
+a {
   text-decoration: none;
   font-size: 14px;
   transition: ease all 0.3s;
@@ -162,7 +162,8 @@ nav, ul, li, a {
 .customers__logo {
   margin: 16px 0;
   filter: grayscale(1) invert(1);
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   height: 36px;
 }
 
@@ -414,11 +415,10 @@ h4 {
   height: auto;
 }
 
-
 .steps__info {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   padding-left: 60px;
 }
 
@@ -657,6 +657,7 @@ h4 {
 .pricing__plans {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .pricing__plan {
@@ -935,6 +936,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .testimonial__person {
@@ -1125,8 +1127,6 @@ footer {
   line-height: 38px;
 }
 
-
-
 .horizontal__line {
   margin: 64px;
   background-color: #6415ff;
@@ -1199,8 +1199,6 @@ svg {
   display: block;
 }
 
-
-
 .menu__link {
   font-size: 20px;
 }
@@ -1225,7 +1223,6 @@ svg {
   opacity: 0;
   transition: all 300ms ease;
 }
-
 
 button {
   transition: all ease 0.3s;
@@ -1287,15 +1284,11 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .menu__link {
   font-size: 20px;
-  
 }
-
-
 
 .btn__purple--menu {
   background-color: #6415ff;
@@ -1313,16 +1306,12 @@ button {
   border: none;
   text-align: center;
   font-size: 18px;
- 
 }
 
 button {
-  transition: all ease .3s;
+  transition: all ease 0.3s;
   cursor: pointer;
 }
-
-
-
 
 @media (max-width: 972px) {
   .nav__link--styling {
@@ -1331,20 +1320,16 @@ button {
 
   svg {
     display: block;
-}
+  }
 
-.btn__menu {
-  display: block;
-}
-
-
-  
+  .btn__menu {
+    display: block;
+  }
 
   .menu--open .menu__backdrop {
-  visibility: visible;
-  opacity: 1;
-}
-
+    visibility: visible;
+    opacity: 1;
+  }
 
   .nav__link {
     display: none;
@@ -1418,21 +1403,12 @@ button {
   width: 100%;
 }
 
-
-
-
-
-
-
-
-@media (max-width: 768px) 
-{
+@media (max-width: 768px) {
   .features h2 {
     font-size: 36px;
   }
 
-  
-.main__text {
+  .main__text {
     width: 80%;
   }
 
@@ -1441,8 +1417,7 @@ button {
     justify-content: center;
     width: 100%;
     display: flex;
-  
-    }
+  }
 
   .gray__description--center {
     text-align: center;
@@ -1451,13 +1426,13 @@ button {
   }
 
   .services {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
   }
 
   .service {
     width: 100%;
-    }
+  }
   .quality-work__info h1 {
     text-align: center;
   }
@@ -1491,8 +1466,6 @@ button {
     width: 100%;
   }
 
- 
-
   .quality__designed-info h1 {
     text-align: center;
   }
@@ -1509,7 +1482,7 @@ button {
 
   .testimonial__info p {
     text-align: center;
-}
+  }
   .service__info p,
   .steps__info p {
     color: #7c8ba1;
@@ -1612,79 +1585,56 @@ button {
   .testimonial__img {
     width: 75%;
   }
-
- 
 }
 
-
 @media (max-width: 576px) {
-   .email__btn {
+  .email__btn {
     position: static;
     width: 100%;
     max-width: 410px;
     padding: 20px;
     display: block;
-}
-   
-.feature__description--para {
-  padding: 24px;
-} 
+  }
 
-.gray__description--para {
-  padding: 24px 24px;
-} 
-  
-.contact__us--row {
-   width: 100%;
-}
+  .feature__description--para {
+    padding: 24px;
+  }
 
-.started {
-  margin: 0 0 16px 0;
-}
+  .gray__description--para {
+    padding: 24px 24px;
+  }
 
-.contact__btn {
-  flex-direction: column;
-}
+  .contact__us--row {
+    width: 100%;
+  }
+
+  .started {
+    margin: 0 0 16px 0;
+  }
+
+  .contact__btn {
+    flex-direction: column;
+  }
 
   .footer__link--list {
     width: calc(100% / 3);
     margin-bottom: 50px;
+  }
+
+  .horizontal__line {
+    margin: 36px 0;
+  }
+  .footer__copyright {
+    flex-direction: column;
+  }
+
+  .logo__company--links {
+    padding: 16px;
+  }
+  .copyright {
+    padding: 16px;
+  }
+  .social__links {
+    padding: 16px;
+  }
 }
-
-.horizontal__line {
-  margin: 36px 0;
-}
-.footer__copyright {
-  flex-direction: column;
-}
-
-.logo__company--links {
-  padding: 16px;
-}
-.copyright {
-  padding: 16px;
-}
-.social__links {
-  padding: 16px;
-}
-  
-}
-
-
-
-
-
-
-
- 
-
-
-}
-
-
-
-
-
-
-
-
